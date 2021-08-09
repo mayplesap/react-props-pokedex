@@ -1,16 +1,9 @@
-import pokedex from "./Pokedex";
-import Pokecard from "./Pokecard";
-
-function App() {
+import Pokedex from "./Pokedex"
+// Always add  the APP to the top
+function App() { 
   return (
-    <div className="container">
-      <div className="App row">
-        { pokedex.map(p => <Pokecard 
-                          id={p.id} 
-                          name={p.name} 
-                          type={p.type} 
-                          base_experience={p.base_experience}/>)}
-      </div>
+    <div className="App container">
+      <Pokedex/>
     </div>
   );
 }

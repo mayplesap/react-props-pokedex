@@ -1,3 +1,5 @@
+import Pokecard from "./Pokecard";
+
 const pokedex = [
   {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
   {id: 7,   name: 'Squirtle',   type: 'water',    base_experience: 63},
@@ -9,4 +11,23 @@ const pokedex = [
   {id: 133, name: 'Eevee',      type: 'normal',   base_experience: 65}
 ];
 
-export default pokedex;
+
+/**Pokedex
+ * Displays the array of pokecards
+ * @param props --- array of pokemon objects 
+ */
+function Pokedex (props) {
+  return (
+    <div className="row">  
+          { props.pokedex.map(p => <Pokecard 
+                            id={p.id} 
+                            name={p.name} 
+                            type={p.type} 
+                            base_experience={p.base_experience}/>)}
+    </div>
+  );
+}
+
+Pokedex.defaultProps = {pokedex};
+export default Pokedex;
+export {pokedex};

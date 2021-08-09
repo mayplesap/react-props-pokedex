@@ -2,6 +2,10 @@ import "./Pokecard.css";
 
 const BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 
+/** Pokecard
+ * Creates a display for a single pokemon card. 
+ * @params props --- pokemon object {id, name, type, base_experience}
+ */
 function Pokecard(props) {
 
   return (
