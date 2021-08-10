@@ -16,18 +16,18 @@ const pokedex = [
  * Displays the array of pokecards
  * @param props --- array of pokemon objects 
  */
-function Pokedex (props) {
+function Pokedex ({pokedexCards}) {
   return (
     <div className="row">  
-          { props.pokedex.map(p => <Pokecard 
-                            id={p.id} 
-                            name={p.name} 
-                            type={p.type} 
-                            base_experience={p.base_experience}/>)}
+      { pokedexCards.map(p => <Pokecard 
+                        id={p.id} 
+                        name={p.name} 
+                        type={p.type} 
+                        base_experience={p.base_experience}/>)}
     </div>
   );
 }
 
-Pokedex.defaultProps = {pokedex};
+// Pokedex.defaultProps = {pokedex};
 export default Pokedex;
 export {pokedex};
